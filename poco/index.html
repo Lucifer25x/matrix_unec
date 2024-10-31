@@ -13,7 +13,7 @@
 <body>
     <nav class="main_container">
         <div class="container">
-            <a href="#">
+            <a href="javascript:void(0)" onclick="openNav()">
                 <i class="ri-menu-2-line"></i>
                 <span>Menu</span>
             </a>
@@ -365,7 +365,24 @@
         </div>
     </div>
 
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar_menu">
+            <div class="close"><i class="ri-close-fill" onclick="closeNav()"></i></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./assets/scripts/main.js"></script>
     <script>
         AOS.init();
     </script>
