@@ -1,0 +1,14 @@
+:root {
+  --primary: #ffc222;
+  --primary_hover: #eeac00;
+  --secondary: #00a149;
+  --body: #808080;
+  --heading: #1e1d23;
+  --light: #999999;
+  --dark: #282828;
+  --border: #e5e5e5;
+  --background: #ffffff;
+  --primary_font: sans-serif;
+  --secondary_font: "Dancing Script", cursive;
+  --nav_bg: #523c38;
+}
