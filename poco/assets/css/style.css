@@ -299,6 +299,33 @@ nav {
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 20px;
+      position: relative;
+      .control {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,.2);
+        z-index: 10;
+        color: rgba(0,0,0,.2);
+        cursor: pointer;
+      }
+      .control:hover {
+        color: black;
+        border: 1px solid black;
+      }
+      .left.control {
+        left: -40px;
+      }
+      .right.control {
+        right: -40px;
+      }
+      
       .food {
         padding: 20px;
         border: 1px solid rgb(213, 198, 198);
@@ -575,33 +602,27 @@ nav {
   }
   .cards {
     .container {
-      /* grid-template-areas:
-        "card1 card2"
-        "card3 card3"; */
-      /* .card:nth-child(1) {
-        grid-area: card1;
-      }
-      .card:nth-child(2) {
-        grid-area: card2;
-      } */
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
       .card:nth-child(1), .card:nth-child(2){
         width: 100%;
       }
       .card:nth-child(3) {
-        /* grid-area: card3; */
         width: 100%;
         grid-column: 1 / -1;
         align-items: center !important;
         p {
-          font-size: 3.5em !important;
+          font-size: 2.5em !important;
         }
         img {
           display: none;
         }
       }
     }
+  }
+
+  .menu {
+    margin-bottom: 20px;
   }
 
   .mobile {
