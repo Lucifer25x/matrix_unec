@@ -574,6 +574,7 @@ nav {
       span {
         font-size: .9em;
         font-weight: 600;
+        text-align: center;
       }
     }
     .col:nth-last-child(){
