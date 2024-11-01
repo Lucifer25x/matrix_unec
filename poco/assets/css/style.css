@@ -573,6 +573,16 @@ nav {
       }
     }
   }
+
+  .favorites {
+    .container {
+      .foods {
+        .food:nth-last-child(1), .food:nth-last-child(2), .food:nth-last-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -655,6 +665,28 @@ nav {
     }
     .col:nth-last-child(){
       border-right: none;
+    }
+  }
+
+  .favorites {
+    .container {
+      .foods {
+        .food:nth-last-child(1), .food:nth-last-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .favorites {
+    .container {
+      .foods {
+        .food:nth-last-child(1){
+          display: none;
+        }
+      }
     }
   }
 }
