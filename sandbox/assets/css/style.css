@@ -70,8 +70,9 @@ nav {
         margin-top: 25px;
         padding: 10px 25px;
         font-weight: 600;
-        transition: .2s ease transform;
+        transition: .3s ease all;
         background-color: #fff;
+        border: none;
     }
     & button:hover {
         transform: translateY(-5px);
