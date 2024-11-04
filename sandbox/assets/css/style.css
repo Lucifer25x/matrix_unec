@@ -4,13 +4,14 @@
 /* Code for background gradient image */
 .background-gradient {
     width: 100%;
-    height: 90%;
+    height: 100%;
     z-index: -10;
     position: absolute;
     top: 0;
     left: 0;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
+    /* border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%; */
+    clip-path: ellipse(100% 80% at 50% 0%);
 }
 
 /* Code for navbar */
