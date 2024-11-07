@@ -10,6 +10,111 @@
 </head>
 
 <body>
+    <!-- Head -->
+    <div class="head main_container">
+        <div class="div container">
+            <div class="side">
+                <p class="hover">English <i class="ri-arrow-down-line"></i></p>
+                <p class="hover">USD <i class="ri-arrow-down-line"></i></p>
+                <p>Free Shipping On All Orders Over $100</p>
+            </div>
+            <div class="side">
+                <p class="active"><i class="ri-flashlight-fill"></i>Flash Sale</p>
+                <p class="hover">Track Order</p>
+                <p class="hover">About</p>
+                <p class="hover">Contact</p>
+                <p class="hover">Blog</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main_nav_container">
+        <div class="nav_container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="Logo" width="150">
+            </div>
+            <div class="links">
+                <ul>
+                    <li id="dropdown">Home <i class="ri-arrow-down-line"></i></li>
+                    <li id="dropdown2">Camera <i class="ri-arrow-down-line"></i></li>
+                    <li id="dropdown3">Headphones <i class="ri-arrow-down-line"></i></li>
+                    <li id="dropdown4">Laptops <i class="ri-arrow-down-line"></i></li>
+                    <li>Smartphone</li>
+                </ul>
+            </div>
+            <div class="other">
+                <div class="left"><i class="ri-heart-line"></i></div>
+                <div class="mid complex">
+                    <div class="icon"><i class="ri-user-line"></i></div>
+                    <div class="content">
+                        <span>My Account</span>
+                        <p>Login</p>
+                    </div>
+                </div>
+                <div class="right complex">
+                    <div class="icon"><i class="ri-shopping-cart-line"></i></div>
+                    <div class="content">
+                        <span>My Cart</span>
+                        <p>$0.00</p>
+                    </div>
+                </div>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dropdown Elements -->
+    <div class="home-dropdown" id="home-dropdown">
+        <div class="container">
+            <div class="el">
+                <h2>Homepage</h2>
+                <ul>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                </ul>
+            </div>
+            <div class="el">
+                <h2>Homepage</h2>
+                <ul>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                </ul>
+            </div>
+            <div class="el">
+                <h2>Homepage</h2>
+                <ul>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                </ul>
+            </div>
+            <div class="el">
+                <h2>Homepage</h2>
+                <ul>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                    <li>Some element</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Part -->
     <div class="main_container">
         <div class="container">
             <div class="left">
@@ -17,19 +122,43 @@
                     <li><i class="ri-menu-line"></i><span>Shop categories</span></li>
                     <li class="menu_with_sub">
                         <i class="ri-smartphone-line"></i><span>Smartphone</span><i class="ri-arrow-right-line"></i>
-                        <ul>
-                            <li><a href="#">Phone</a></li>
-                            <li><a href="#">Tablet</a></li>
-                            <li><a href="#">Laptop</a></li>
-                        </ul>
+                        <div class="submenu">
+                            <div class="flex">
+                                <div class="part">
+                                    <h1>Computers & Template</h1>
+                                    <ul>
+                                        <li><a href="#">Phone</a></li>
+                                        <li><a href="#">Tablet</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Phone</a></li>
+                                        <li><a href="#">Tablet</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                    </ul>
+                                </div>
+                                <div class="part">
+                                    <h1>Something Else</h1>
+                                    <ul>
+                                        <li><a href="#">Phone</a></li>
+                                        <li><a href="#">Tablet</a></li>
+                                        <li><a href="#">Laptop</a></li>
+                                        <li><a href="#">Phone</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="menu_with_sub">
                         <i class="ri-macbook-line"></i><span>Laptops</span><i class="ri-arrow-right-line"></i>
-                        <ul>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Something 2</a></li>
-                            <li><a href="#">Something 3</a></li>
-                        </ul>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Something 2</a></li>
+                                <li><a href="#">Something 3</a></li>
+                                <li><a href="#">Something 4</a></li>
+                                <li><a href="#">Something 5</a></li>
+                                <li><a href="#">Something 6</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li><i class="ri-camera-line"></i><span>Camera</span></li>
                     <li><i class="ri-headphone-line"></i><span>Headphones</span></li>
@@ -74,6 +203,29 @@
             </div>
         </div>
     </div>
+
+    <!-- Cards -->
+    <div class="cards_main_container">
+        <div class="cards_container">
+            <div class="card">
+                <span>BIG SALE</span>
+                <h1>Top Smartphone</h1>
+                <p>TODAY'S SUPER OFFER</p>
+            </div>
+            <div class="card">
+                <span>BIG SALE</span>
+                <h1>Top Smartphone</h1>
+                <p>TODAY'S SUPER OFFER</p>
+            </div>
+            <div class="card">
+                <span>BIG SALE</span>
+                <h1>Top Smartphone</h1>
+                <p>TODAY'S SUPER OFFER</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/script/main.js"></script>
 </body>
 
 </html>
