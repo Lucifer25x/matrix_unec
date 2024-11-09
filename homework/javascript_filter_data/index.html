@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Filter data</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="filters">
+                <input id="price" type="number" placeholder="Price" min="0">
+                <input id="rating" type="number" placeholder="rating" min="0" max="10">
+                <select name="category" id="category">
+                    <option value="men's clothing">men's clothing</option>
+                    <option value="jewelery">jewelery</option>
+                    <option value="electronics">electronics</option>
+                    <option value="women's clothing">women's clothing</option>
+                </select>
+                <hr>
+                <div class="buttons">
+                    <button id="filter_price">Filter by price</button>
+                    <button id="filter_rating">Filter by rating</button>
+                    <button id="filter_category">Filter by category</button>
+                    <button id="filter_all">Filter by all</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main_forof_method.js"></script>
+</body>
+</html>
