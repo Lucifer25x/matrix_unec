@@ -311,7 +311,7 @@ function filter_category(arr, category) {
 function filter_all(arr, price, rating, category) {
   let res = filter_price(arr, price);
   res = filter_rating(res, rating);
-  res = filter_price(res, price);
+  res = filter_category(res, price);
   return res;
 }
 
