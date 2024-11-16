@@ -107,6 +107,10 @@ function changeLang(lang){
     card_elements.forEach((el, ind) => {
         el.textContent = translatedData.cards[ind];
     })
+    const learn_elements = document.querySelectorAll('.card_learn');
+    learn_elements.forEach(el => {
+        el.textContent = translatedData.cards[4];
+    })
 
     // Translate why part
     document.querySelector('.why_sub').textContent = translatedData.why[0]
