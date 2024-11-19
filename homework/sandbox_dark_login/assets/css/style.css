@@ -205,9 +205,6 @@ nav {
         .collect_ideas {
             .row {
                 color: #737b8b;
-                & h2 {
-                    /* color: black; */
-                }
                 & p {
                     font-weight: 400;
                     color: #737b8b !important;
