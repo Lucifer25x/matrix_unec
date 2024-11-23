@@ -163,7 +163,7 @@ body {
         align-items: center;
         justify-content: space-between;
         & button {
-            padding: 5px;
+            padding: 8px;
             cursor: pointer;
             background-color: var(--violet);
             border-radius: var(--border-radius);
