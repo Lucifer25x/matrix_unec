@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Todo App</h1>
+        <div class="add">
+            <form id="add">
+                <input id="todo" type="text" placeholder="Add your new todo" autocomplete="off" autofocus required>
+                <button type="submit"><i class="ri-add-large-line"></i></button>
+            </form>
+        </div>
+        <div class="todos">
+            <div class="list"></div>
+            <div class="empty">
+                <i class="ri-question-mark"></i>
+                <p>You don't have anything to do.</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="check_all">Check All</button>
+            <button id="invert_all">Invert All</button>
+        </div>
+        <div class="bottom">
+            <p>You have <span id="pending">4</span> pending tasks</p>
+            <button id="delete_all">Delete All</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
