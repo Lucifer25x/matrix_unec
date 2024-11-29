@@ -1,0 +1,14 @@
+:root {
+    --primary: #A279B3;
+    --primary_hover: #8a6599;
+    --secondary: #D385B7;
+    --white_bg: #fef8f8;
+    --gray_bg: #f5efef;
+    --gray_bg_hover: #eae3e3;
+    --red_bg: rgb(234, 64, 64);
+    --red_bg_hover: rgb(209, 53, 53);
+    --font: 'Roboto', sans-serif;
+    --color: #755185;
+    --border: 1px solid rgba(0,0,0,.2);
+    --border_radius: 5px;
+}

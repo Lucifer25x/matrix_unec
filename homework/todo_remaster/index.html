@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <title>Todo Remastered</title>
+</head>
+<body>
+    <!-- Code related to account creation -->
+    <div class="account">
+        <div class="login card hidden">
+            <h1>Login</h1>
+            <form id="login">
+                <input type="text" id="username" placeholder="Username..." autocomplete="off" required>
+                <div class="password">
+                    <input type="password" id="password" placeholder="Password..." autocomplete="off" required>
+                    <button type="button" id="toggle"><i class="ri-eye-off-fill"></i></button>
+                </div>
+                <button class="submit" type="submit">Login</button>
+                <p><span id="create_account">Create an account</span>, if you don't have one.</p>
+            </form>
+        </div>
+        <div class="register card hidden">
+            <h1>Register</h1>
+            <form id="register">
+                <input type="text" id="username" placeholder="Username..." autocomplete="off" required>
+                <div class="password">
+                    <input type="password" id="password" placeholder="Password..." autocomplete="off" required>
+                    <button type="button" id="toggle"><i class="ri-eye-off-fill"></i></button>
+                </div>
+                <div class="password">
+                    <input type="password" id="confirm_password" placeholder="Confirm your password..." autocomplete="off" required>
+                    <button type="button" id="confirm_toggle"><i class="ri-eye-off-fill"></i></button>
+                </div>
+                <p class="red hidden">Passwords don't match.</p>
+                <button class="submit" type="submit">Register</button>
+                <p class="b"><span id="have_account">Login</span>, if you already have an account.</p>
+            </form>
+            </form>
+        </div>
+    </div>
+
+    <!-- Todo List -->
+    <div class="todo hidden">
+        <h2><span id="name">User</span>'s todo list</h2>
+        <div class="top">
+            <form id="add_todo">
+                <input type="text" id="todo" placeholder="Write todo..." autocomplete="off" required>
+                <button type="submit">+</button>
+            </form>
+        </div>
+        <div class="nothing hidden">
+            <p>🗑️</p>
+            <p>You have nothing to do!</p>
+        </div>
+        <div class="list"></div>
+        <div class="buttons">
+            <button id="check_all">Check All</button>
+            <button id="invert_all">Invert All</button>
+        </div>
+        <div class="bottom">
+            <p>Pending tasks: <span id="task">0</span></p>
+            <button id="delete_all">Delete All</button>
+        </div>
+    </div>
+
+    <div class="logout hidden">
+        <i class="ri-corner-up-left-line"></i>
+        <p>Log out</p>
+    </div>
+
+    <!-- <div class="el">
+        <div class="main"><p>Something here</p></div>
+        <button class="delete">D</button>
+    </div> -->
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
