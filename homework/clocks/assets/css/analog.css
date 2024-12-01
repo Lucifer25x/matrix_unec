@@ -1,0 +1,106 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background: #201f29;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clock */
+.clock_frame {
+    width: 260px;
+    height: 260px;
+    box-sizing: border-box;
+    background-color: rgb(244, 236, 226);
+    box-shadow: 0 0 20px rgba(0,0,0,.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    .clock {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: inset 0 0 10px rgb(65, 63, 63);
+        .m12, .m3, .m6, .m9 {
+            background-color: rgb(65, 63, 63);
+            width: 4px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+        }
+        .m12 {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .m6 {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .m3 {
+            right: 15px;
+            top: 47%;
+            rotate: 270deg;
+        }
+        .m9 {
+            left: 15px;
+            top: 47%;
+            rotate: 270deg;
+        }
+    }
+    .clock::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: rgb(65, 63, 63);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.clock_hand {
+    width: 3px;
+    height: 60px;
+    background: rgb(65, 63, 63);
+    position: absolute;
+    top: 50%;
+    transform-origin: top;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+.minute_hand {
+    width: 3px;
+    height: 70px;
+    background: rgb(65, 63, 63);
+    position: absolute;
+    top: 50%;
+    transform-origin: top;
+    transform: rotate(90deg);
+    z-index: 3;
+}
+.second_hand {
+    width: 3px;
+    height: 85px;
+    background: rgb(207, 84, 84);
+    position: absolute;
+    top: 50%;
+    transform-origin:top;
+    transform: rotate(90deg);
+    z-index: 4;
+}

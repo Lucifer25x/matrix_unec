@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 7 segmented font */
+@font-face {
+    font-family: 'DSEG7';
+    src: url('../fonts/DSEG7Classic-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables */
+:root {
+    --darker_bg: #080b05;
+    --dark_bg: #1e2410;
+    --dark_green: #2b3618;
+    --color: #6b873c;
+    --dark_color: #313d1b;
+    --border_radius: 5px;
+    --font: 'DSEG7';
+}
+
+/* Body */
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darker_bg);
+}
+
+/* Digital Clock */
+.digital {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: var(--border_radius);
+    border: 20px solid var(--dark_bg);
+    background-color: var(--dark_green);
+    box-shadow: 0 0 200px var(--dark_color);
+    font-size: 3em;
+    font-family: var(--font);
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    .shadow {
+        position: absolute;
+        display: flex;
+        color: var(--dark_color);
+    }
+    .clock {
+        display: flex;
+        color: var(--color);
+        z-index: 2;
+        text-shadow: 0 0 15px var(--color);
+        animation: glow infinite 1000ms;
+    }
+}
+.digital:hover {
+    scale: 1.1;
+}
+
+@keyframes glow {
+    0% {opacity: 100%;}
+    25% {opacity: 95%;}
+    50% {opacity: 85%;}
+    75% {opacity: 95%;}
+    75% {opacity: 100%;}
+}

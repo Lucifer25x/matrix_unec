@@ -1,0 +1,109 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(239, 232, 232);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 800px;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    .card {
+        background-color: white;
+        border: 1px solid rgba(0,0,0,.2);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: .3s ease all;
+        cursor: pointer;
+        .details {
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            .tags {
+                display: flex;
+                grid-gap: 10px;
+                .tag {
+                    padding: 1px 10px;
+                    background-color: rgb(100, 89, 70);
+                    border-radius: 5px;
+                    color: white;
+                    font-size: .8em;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: .3s ease all;
+                    font-weight: 300;
+                }
+                .tag:hover {
+                    background-color: rgb(78, 69, 55);
+                }
+            }
+            & h2 {
+                margin-top: 10px;
+                font-size: 1em;
+            }
+            & p {
+                font-size: .8em;
+                height: 100px;
+                max-height: 100px;
+                overflow-y: scroll;
+            }
+            .bottom {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: .9em;
+                font-weight: 500;
+                .price {
+                    padding: 1px 10px;
+                    background-color: orange;
+                    border-radius: 5px;
+                    color: white;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: .3s ease all;
+                }
+                .price:hover {
+                    background-color: rgb(238, 156, 4);
+                }
+            }
+        }
+    }
+    .card:hover {
+        scale: 1.02;
+    }
+}
+
+/* Responsive */
+@media(max-width: 800px){
+    .container {
+        grid-template-columns: auto auto;
+    }
+}
+@media(max-width: 570px){
+    .container {
+        grid-template-columns: auto;
+    }
+}
