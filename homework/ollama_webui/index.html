@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Ollama Web UI</title>
+</head>
+<body>
+    <div class="not_running hidden">
+        <span>😑</span>
+        <p>Ollama isn't running!</p>
+    </div>
+
+    <div class="main hidden">
+        <div class="choose_model">
+            <label for="model">Choose a model to load:</label>
+            <select name="model" id="model_list"></select>
+        </div>
+        <div class="start">
+            <p><i class="ri-chat-1-fill"></i><span>Start Chatting</span></p>
+        </div>
+        <button id="running_list"><i class="ri-file-list-fill"></i> List of running models</button>
+    </div>
+
+    <div class="running_list hidden">
+        <h1>Running Models</h1>
+        <button id="close_running_list">x</button>
+        <div class="models"></div>
+        <button id="stop_all">Stop all running models</button>
+    </div>
+
+    <div class="chat_window hidden">
+        <div class="top">
+            <div class="name"></div>
+            <button id="stop_chat"><i class="ri-corner-up-left-fill"></i></button>
+        </div>
+        <div class="chat">
+            <div class="messages"></div>
+            <div class="send">
+                <form id="send">
+                    <input id="message_text" type="text" placeholder="Write your message..." autocomplete="off" autofocus required>
+                    <button><i class="ri-send-plane-2-fill"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading_screen">
+        <div class="circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <div class="settings hidden">
+        <form id="settings">
+            <input type="number" placeholder="Type the port for ollama..." id="port" autocomplete="off">
+            <button>Submit</button>
+            <p>Default port: <a href="http://127.0.0.1:11434/">11434</a></p>
+        </form>
+    </div>
+
+    <button class="hidden" id="open_settings"><i class="ri-settings-4-fill"></i> Open settings</button>
+
+    <button id="refresh"><i class="ri-restart-fill"></i></button>
+    
+    <script src="./assets/js/ollama.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

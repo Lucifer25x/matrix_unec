@@ -1,0 +1,11 @@
+:root {
+    --bg_color: #282c34;
+    --color: #ccd1dc; 
+    --color_hover: #b9bdc7;
+    --violet_color: #b36ec8;
+    --violet_hover_color: #9757aa;
+    --red_color: #d56871;
+    --red_hover_color: #b7545c;
+    --font: "Poppins", serif;
+    --border_radius: 5px;
+}
