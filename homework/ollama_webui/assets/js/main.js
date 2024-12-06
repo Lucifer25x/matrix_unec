@@ -134,9 +134,9 @@ document.getElementById("send").addEventListener("submit", e => {
         document.querySelector(".messages").appendChild(msg_ai);
 
         // Add animation to the message
-        msg_ai.classList.add("slide_up");
+        msg_ai.classList.add("slide_right");
         setTimeout(() => {
-            msg_ai.classList.remove("slide_up")
+            msg_ai.classList.remove("slide_right")
         }, 300);
 
         // Really chat with ai

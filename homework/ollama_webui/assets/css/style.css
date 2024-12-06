@@ -341,8 +341,8 @@ input:focus {
         display: flex;
         gap: 20px;
         .circle {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background-color: var(--violet_color);
             animation: 1s loading infinite;
@@ -399,6 +399,16 @@ input:focus {
         transform: translateY(0);
     }
 }
+@keyframes slide_right {
+    from {
+        opacity: .9;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .disappear {
     animation: .3s disappear forwards;
@@ -408,4 +418,7 @@ input:focus {
 }
 .slide_up {
     animation: .3s slide_up forwards;
+}
+.slide_right {
+    animation: .3s slide_right forwards;
 }
