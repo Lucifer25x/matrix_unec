@@ -90,8 +90,7 @@ body {
             display: flex;
             gap: 10px;
 
-            & p,
-            & a {
+            & p {
                 display: flex;
                 align-items: center;
                 gap: 5px;
@@ -379,6 +378,8 @@ h2 {
     transition: .3s ease all;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     & span {
         z-index: 2;
         display: flex;
@@ -386,9 +387,11 @@ h2 {
         gap: 5px;
     }
 }
+.btn:hover {
+    transform: translateY(-3px);
+}
 .btn.no_effect:hover {
     background-color: black;
-    /* transform: translateY(-3px); */
 }
 .btn.effect::before {
     content: '';
@@ -399,12 +402,12 @@ h2 {
     background-color: black;
     z-index: 0;
     left: 0;
-    transform: translateY(-300px);
-    transition: .3s ease all;
+    transform: translateY(-150%);
+    transition: .5s ease all;
 }
 .btn.effect:hover::before {
     transform: translateY(0);
-    transition: .3s ease all;
+    transition: .5s ease all;
 }
 
 /* Stars */
@@ -477,8 +480,56 @@ h2 {
     }
 }
 
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    z-index: 999;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    padding: 20px;
+    transition: .3s ease all;
+    & > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 10px 0;
+        text-decoration: none;
+        color: black;
+        transition: .3s ease all;
+    }
+    & > a:hover {
+        color: #ff2352;
+    }
+
+    .buttons {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        & > p {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.sidebar.active {
+    left: 0;
+    transition: .3s ease all;
+}
+
 /* Responsive code */
-@media(max-width: 1200px){
+/* @media(max-width: 1200px){
+    
+} */
+
+@media(max-width: 900px){
     nav .container .links {
         display: none;
     }
@@ -488,12 +539,6 @@ h2 {
     nav .container .mobile_bar {
         display: flex;
     }
-}
-
-@media(max-width: 800px){
-    /* body {
-        font-size: 12px;
-    } */
     .main_body {
         .top {
             flex-direction: column;
@@ -505,5 +550,11 @@ h2 {
     .card {
         width: 100%;
         flex-direction: column;
+    }
+}
+
+@media(min-width: 900px){
+    .sidebar {
+        display: none;
     }
 }

@@ -19,6 +19,7 @@ class App extends React.Component {
         <Header />
         <Container>
           <ImageSlider />
+          <br />
           <Body />
           <Reviews />
         </Container>
@@ -28,4 +29,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;

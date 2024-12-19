@@ -1,12 +1,26 @@
 import React from 'react';
-import {RiGlobalLine, RiLoginBoxLine, RiMenuLine} from '@remixicon/react';
+import {RiGlobalLine, RiLoginBoxLine, RiMenuLine, RiCloseLine} from '@remixicon/react';
 import Container from "./Container";
 import Button from './Button';
+import Sidebar from './Sidebar';
 
 class Navbar extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      sidebar: false
+    }
+  }
+
+  changeSidebar = () => {
+    this.setState({sidebar: !this.state.sidebar});
+    document.body.style.overflowY = !this.state.sidebar ? "hidden" : "auto"; 
+  }
+
   render() {
     return (
-      <nav>
+      <div>
+        <nav>
         <Container>
             <div className="logo">Bookapp</div>
             <div className="links">
@@ -19,13 +33,15 @@ class Navbar extends React.Component {
             </div>
             <div className="right">
                 <p><RiGlobalLine size={20}/> Eng</p>
-                <Button effect="1"><RiLoginBoxLine size={20}/> Login</Button>
+                <Button effect="1"><span><RiLoginBoxLine size={20}/> Login</span></Button>
             </div>
-            <div className="mobile_bar">
-              <RiMenuLine size={20}/>
+            <div className="mobile_bar" onClick={() => this.changeSidebar()}>
+              {this.state.sidebar ? <RiCloseLine size={20}/> : <RiMenuLine size={20}/>}
             </div>
         </Container>
       </nav>
+      <Sidebar active={this.state.sidebar}/>
+      </div>
     );
   }
 }
