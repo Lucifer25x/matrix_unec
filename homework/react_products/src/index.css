@@ -160,6 +160,13 @@ body {
             cursor: pointer;
             border-radius: 5px;
             margin-bottom: 20px;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            transition: .3s ease all;
+        }
+        & button:hover {
+            background-color: #4b0082;
         }
     }
 }

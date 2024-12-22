@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import PopupAboutCard from "./PopupAboutCard";
 
 const url = "https://fakestoreapi.com/products";
 const categories = ["electronics","jewelery","men's clothing","women's clothing"];
@@ -9,20 +8,23 @@ class Cards extends React.Component {
     constructor(){
         super();
         this.state = {
-            products: []
+            products: [],
+            backup: []
         }
     }
 
     componentDidMount(){
         fetch(url)
             .then(response => response.json())
-            .then(data => this.setState({products: data}))
+            .then(data => this.setState({products: data, backup: data}))
     }
-
+    
     filterByCategory = (category) => {
-        fetch(`${url}/category/${category}`)
-            .then(response => response.json())
-            .then(data => this.setState({products: data}))
+        if(category === "All"){
+            this.setState({products: this.state.backup})
+        } else {
+            this.setState({products: this.state.backup.filter(product => product.category === category)})
+        }
     }
 
     showPopup = (product) => {
@@ -30,13 +32,33 @@ class Cards extends React.Component {
             showPopup: true,
             product: product
         })
+        document.body.style.overflow = "hidden";
+    }
+
+    closePopup = () => {
+        this.setState({
+            showPopup: false
+        })
+        document.body.style.overflow = "auto";
     }
 
     render(){
         return (
             <>
-                <PopupAboutCard category={this.state.product?.category} title={this.state.product?.title} description={this.state.product?.description} price={this.state.product?.price} rate={this.state.product?.rating.rate} count={this.state.product?.rating.count}
-                    show={this.state.showPopup}/>
+                <div className={this.state.showPopup ? "popup show" : "popup"}>
+                    <div>
+                        <button onClick={this.closePopup}>x</button>    
+                        <div className="content">
+                            <p>Category: {this.state.product?.category}</p>
+                            <h1>{this.state.product?.title}</h1>
+                            <p>Description: {this.state.product?.description}</p>
+                            <br />
+                            <p>Price: {this.state.product?.price}</p>
+                            <p>Rate: {this.state.product?.rating?.rate}</p>
+                            <p>Rating Count: {this.state.product?.rating?.count}</p>
+                        </div>
+                    </div>
+                </div>
                 <div className="cards">
                     <div className="buttons">
                         {categories.map(category => (
