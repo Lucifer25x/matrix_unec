@@ -55,9 +55,12 @@ body {
                 overflow: hidden;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 & img {
-                    width: 100%;
-                    object-fit: cover;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
             .img::after {
