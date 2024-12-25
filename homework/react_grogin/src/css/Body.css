@@ -113,6 +113,9 @@
                 background-color: #f3f4f6;
             }
         }
+        .list {
+            margin-top: 15px;
+        }
     }
 }
 
