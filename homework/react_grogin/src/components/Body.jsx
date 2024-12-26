@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Stars from "./Stars";
 import "../css/Body.css";
 
 const apiUrl = "https://dummyjson.com/products";
@@ -33,8 +34,6 @@ function Body() {
         const maxRating = Math.max(...data.products.map(product => product.rating));
         setMinRating(minRating);
         setMaxRating(maxRating);
-
-        // console.log(data.products);
     }
 
     const categoryFilter = (category, checked) => {
@@ -47,7 +46,6 @@ function Body() {
 
     useEffect(() => {
         fetchProducts();
-        // console.log(selectedCategories)
     }, [selectedCategories]);
 
     return (
@@ -58,16 +56,15 @@ function Body() {
                     <div className="controls">
                         <div className="el">
                             <label htmlFor="minPrice">Min price</label>
-                            <input type="number" id="minPrice" value={minPrice} onChange={(e) => setMinPrice(e.target.value)}/>
+                            <input type="number" id="minPrice" onChange={(e) => setMinPrice(e.target.value)}/>
                         </div>
                         <div className="el">
                             <label htmlFor="maxPrice">Max price</label>
-                            <input type="number" id="maxPrice" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)}/>
+                            <input type="number" id="maxPrice" onChange={(e) => setMaxPrice(e.target.value)}/>
                         </div>
                     </div>
                     <div className="bottom">
                         <p>Price: ${minPrice} - ${maxPrice}</p>
-                        <button>Filter</button>
                     </div>
                 </div>
                 <div className="filter">
@@ -75,32 +72,19 @@ function Body() {
                     <div className="controls">
                         <div className="el">
                             <label htmlFor="minRating">Min rating</label>
-                            <input type="number" id="minRating" value={minRating} onChange={(e) => setMinRating(e.target.value)}/>
+                            <input type="number" id="minRating" onChange={(e) => setMinRating(e.target.value)}/>
                         </div>
                         <div className="el">
                             <label htmlFor="maxRating">Max price</label>
-                            <input type="number" id="maxRating" value={maxRating} onChange={(e) => setMaxRating(e.target.value)}/>
+                            <input type="number" id="maxRating" onChange={(e) => setMaxRating(e.target.value)}/>
                         </div>
                     </div>
                     <div className="bottom">
                         <p>Rating: {minRating} - {maxRating}</p>
-                        <button>Filter</button>
                     </div>
                 </div>
                 <div className="categories">
                     <h4>Product Categories</h4>
-                    {/* <div>
-                        <input type="checkbox" id="category1" />
-                        <label htmlFor="category1">Category 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="category2" />
-                        <label htmlFor="category2">Category 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="category3" />
-                        <label htmlFor="category3">Category 3</label>
-                    </div> */}
                     {categories.map((category, index) => (
                         <div key={index}>
                             <input type="checkbox" id={`category${index}`} onChange={(e) => categoryFilter(category, e.target.checked)}/>
@@ -117,12 +101,17 @@ function Body() {
                     <a href="#">Shop Now</a>
                 </div>
                 <div className="list">
-                    <div className="product">
-                        <div className="img">
-                            <img src="https://via.placeholder.com/150" alt="Product" />
-                            <p>Product Name</p>
+                    {products.filter(product => (selectedCategories.length > 0 ? selectedCategories.includes(product.category) : true) && product.price >= minPrice && product.price <= maxPrice && product.rating >= minRating && product.rating <= maxRating).map((product, index) => (
+                        <div key={index} className="product">
+                            <div className="img">
+                                <img src={product.images[0]} alt="Product" />
+                            </div>
+                            <p className="name">{product.title}</p>
+                            <Stars rating={product.rating} />
+                            <p className="price">${product.price} <span>${product.price * 2}</span></p>
+                            <p className="discount">{Math.floor((product.price * 2 - product.price) / (product.price * 2) * 100)}%</p>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
