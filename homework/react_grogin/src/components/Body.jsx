@@ -56,11 +56,11 @@ function Body() {
                     <div className="controls">
                         <div className="el">
                             <label htmlFor="minPrice">Min price</label>
-                            <input type="number" id="minPrice" onChange={(e) => setMinPrice(e.target.value)}/>
+                            <input type="number" id="minPrice" value={minPrice} onChange={(e) => setMinPrice(e.target.value)}/>
                         </div>
                         <div className="el">
                             <label htmlFor="maxPrice">Max price</label>
-                            <input type="number" id="maxPrice" onChange={(e) => setMaxPrice(e.target.value)}/>
+                            <input type="number" id="maxPrice" value={maxPrice}  onChange={(e) => setMaxPrice(e.target.value)}/>
                         </div>
                     </div>
                     <div className="bottom">
@@ -72,11 +72,11 @@ function Body() {
                     <div className="controls">
                         <div className="el">
                             <label htmlFor="minRating">Min rating</label>
-                            <input type="number" id="minRating" onChange={(e) => setMinRating(e.target.value)}/>
+                            <input type="number" id="minRating" value={minRating}  onChange={(e) => setMinRating(e.target.value)}/>
                         </div>
                         <div className="el">
                             <label htmlFor="maxRating">Max price</label>
-                            <input type="number" id="maxRating" onChange={(e) => setMaxRating(e.target.value)}/>
+                            <input type="number" id="maxRating" value={maxRating}  onChange={(e) => setMaxRating(e.target.value)}/>
                         </div>
                     </div>
                     <div className="bottom">
