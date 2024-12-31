@@ -1,0 +1,100 @@
+.user {
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .left {
+            width: 40%;
+            & img {
+                width: 200px;
+                border-radius: 50%;
+            }
+            & p {
+                display: flex;
+                gap: 5px;
+            }
+            & hr {
+                margin: 10px 0;
+            }
+            & a {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                transition: .3s ease all;
+            }
+            & a:hover {
+                color: #0366d6;
+            }
+            .followers {
+                margin-top: 10px;
+            }
+        }
+        .right {
+            width: 60%;
+            .repos {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                .repo {
+                    background-color: #2b3137;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                    transition: .3s ease all;
+                    border: 1px solid transparent;
+                    .name {
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 500;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                    .name:hover {
+                        text-decoration: underline;
+                    }
+                    .description {
+                        margin-top: 5px;
+                        color: #8b949e;
+                        height: 50px;
+                        overflow-y: scroll;
+                    }
+                    & p {
+                        display: flex;
+                        gap: 5px;
+                    }
+                    .flex {
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+                .repo:hover {
+                    background-color: #262a2e;
+                    border: 1px solid rgba(255, 255, 255, .1);
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .user {
+        .container {
+            flex-direction: column;
+            .left {
+                width: 100%;
+                text-align: center;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}

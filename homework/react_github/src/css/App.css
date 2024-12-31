@@ -15,12 +15,55 @@ body {
     color: #fff;
 }
 
-.profiles {
+/* Container */
+.container {
     width: 100%;
     max-width: 1200px;
-    padding: 20px; 
+    padding: 20px;
     margin: 0 auto;
+}
+
+/* Search */
+.search {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2b3137;
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid transparent;
+    }
+    & input:focus {
+        border: 1px solid #007bff;
+    }
+    & button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .3s ease all;
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}
+
+/* Profiles */
+.profiles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    justify-items: center;
 }
