@@ -16,6 +16,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font1);
+    overflow-x: hidden;
 }
 
 /* Container */
@@ -25,17 +26,19 @@ body {
     margin: 20px auto;
     padding: 0 20px;
     display: flex;
-    gap: 20px;
     .left {
-        width: 30%;
+        height: 100%;
+        width: 40%;
         position: sticky;
         top: 0;
-        height: 100vh;
-        /* display: flex;
-        align-items: center; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
     .right {
         width: 60%;
+        padding-left: 20px;
     }
 }
 
@@ -48,6 +51,7 @@ body {
             height: auto;
         }
         .right {
+            margin-top: 20px;
             width: 100%;
         }
     }

@@ -1,5 +1,5 @@
 import Toggle from "./Toggle";
-import {RiMenu2Line} from "@remixicon/react";
+import {RiMenu2Line, RiMailFill} from "@remixicon/react";
 import logo from "../img/logo1.png";
 import "../css/Navbar.css";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
             </div>
             <div className="right">
                 <Toggle />
-                <a href="#">HIRE ME</a>
+                <a href="#">HIRE ME <RiMailFill size={25}/></a>
                 <RiMenu2Line size={30} style={{cursor: "pointer"}}/>
             </div>
         </div>

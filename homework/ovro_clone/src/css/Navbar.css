@@ -26,6 +26,9 @@
             font-size: 1.2em;
             border-radius: 150px;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             &:hover {
                 background-color: transparent;
                 border: 1px solid var(--text);

@@ -1,0 +1,79 @@
+.floating_sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    & a {
+        padding: 20px;
+        background-color: var(--bg2);
+        border-radius: 8px;
+        border: var(--border);
+        color: var(--text);
+        transition: all 0.5s ease;
+        position: relative;
+        &:hover {
+            background-color: var(--primary);
+            color: #000;
+        }
+    }
+    & a.active {
+        background-color: var(--primary);
+        color: #000;
+    }
+    & a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        opacity: 0;
+        z-index: 2;
+        width: 200px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 1.5em;
+        background-color: var(--primary);
+        color: #000;
+        border-radius: 5px;
+        transition: .5s ease all;
+    }
+    & a:hover::after {
+        opacity: 1;
+        left: calc(100% + 10px);
+        transition: .5s ease all;
+    }
+    & a:nth-child(1)::after {
+        content: "Home";    
+    }
+    & a:nth-child(2)::after {
+        content: "About Us";
+    }
+    & a:nth-child(3)::after {
+        content: "Our Service";
+    }
+    & a:nth-child(4)::after {
+        content: "My Skill";
+    }
+    & a:nth-child(5)::after {
+        content: "Portfolio";
+    }
+    & a:nth-child(6)::after {
+        content: "Testimonal";
+    }
+    & a:nth-child(7)::after {
+        content: "Our Blog";
+    }
+    & a:nth-child(8)::after {
+        content: "Contact Us";
+    }
+}
+
+@media(max-width: 1000px){
+    .floating_sidebar {
+        display: none;
+    }
+}
