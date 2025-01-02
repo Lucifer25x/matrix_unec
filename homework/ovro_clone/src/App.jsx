@@ -1,35 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import "./css/App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Navbar />
+      <div className="container">
+        <div className="left">
+          <Profile />
+        </div>
+        <div className="right">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <var><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <var><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          <var>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, totam ab neque voluptatibus itaque nihil qui quaerat blanditiis sint aliquid temporibus nesciunt est doloremque non mollitia eligendi? Optio, doloribus perferendis!</p>
+          </var></var></var>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
-export default App
+export default App;

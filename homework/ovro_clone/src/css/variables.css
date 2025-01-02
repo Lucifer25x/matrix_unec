@@ -1,0 +1,20 @@
+:root {
+    --bg: #061d1e;
+    --bg2: #1f3435;
+    --primary: #ffae00;
+    --text: #fff;
+    --text2: #d2d6d6;
+    --font1: "Figtree", sans-serif;
+    --font2: "Playfair Display", serif;
+    --img_filter: invert(0);
+    --orange_filter: brightness(0.7) saturate(100%) sepia(1) hue-rotate(-30deg) saturate(500%);
+}
+
+body.light {
+    --bg: #fff;
+    --bg2: #f2f3f3;
+    --primary: #ffae00;
+    --text: #0e161f;
+    --text2: #3d444b;
+    --img_filter: invert(1);
+}
