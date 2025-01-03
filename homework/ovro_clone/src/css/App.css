@@ -221,6 +221,9 @@ body {
             & p {
                 color: var(--text2);
             }
+            & img {
+                filter: var(--img_filter);
+            }
         }
     }
 }

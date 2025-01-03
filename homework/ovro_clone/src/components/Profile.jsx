@@ -7,6 +7,7 @@ const Profile = () => {
         <div className="profile" data-aos-once="true" data-aos="fade-right" data-aos-duration="1000">
             <div className="img">
                 <img src={profile_img}/>
+                <div className="shimmer"></div>
             </div>
             <div className="info">
                 <h2>Alex Carry</h2>
