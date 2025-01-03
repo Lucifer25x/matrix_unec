@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./components/Navbar";
@@ -13,6 +13,8 @@ import logo1 from "./img/logo1.png";
 import { RiArrowUpCircleFill } from "@remixicon/react";
 
 const App = () => {
+  const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     Aos.init();
   });
@@ -24,9 +26,17 @@ const App = () => {
     });
   }
 
+  window.onscroll = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  }
+
   return (
     <>
-      <div onClick={() => scrollToTop()} className="scroll_top"><RiArrowUpCircleFill size={50}/></div>
+      <div style={!scroll ? {display: "none"} : null} onClick={() => scrollToTop()} className="scroll_top"><RiArrowUpCircleFill size={50}/></div>
       <Navbar />
       <div className="container">
         <div className="left">
@@ -34,19 +44,24 @@ const App = () => {
           <Profile />
         </div>
         <div className="right">
-          <p data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> Hi, I’m Alex, UI/UX Designer</p>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Designing Intuitive</h1>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Experiences <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Inspire</span></h1>
+          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> Hi, I’m Alex, UI/UX Designer</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Designing Intuitive</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Experiences <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Inspire</span></h1>
+          </div>
           <p data-aos-duration="1000" data-aos="fade-left" style={{width: "70%", float: "right", marginTop: "20px"}}>Your gateway to innovative design, seamless user experiences, and impactful solutions. Turning complex ideas into user-friendly designs.</p>
+          
           <div data-aos-duration="1000" data-aos="fade-left" style={{width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "30px", float: "left"}}>
             <img className="circle" src={circle} width={150}/>
             <img src={reviews} width={150} />
           </div>
           <a data-aos-duration="1000" data-aos="fade-up" className="big_btn" href="#"><span>Lets Work Together</span></a>
 
-          <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> About Us</p>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Crafting Seamless</h1>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>User <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Experiences</span></h1>
+          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> About Us</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Crafting Seamless</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>User <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Experiences</span></h1>
+          </div>
 
           <div className="cards">
             <div data-aos-duration="1000" data-aos="fade-left" className="card">
@@ -73,10 +88,12 @@ const App = () => {
             </div>
           </div>
 
+          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Services</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Elevating Brands</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Intuitive <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
+          </div>
 
-          <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Services</p>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Elevating Brands</h1>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Intuitive <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
           <div className="cards">
             <div style={{marginTop: "20px"}} data-aos-duration="1000" data-aos="fade-up" className="card">
               <h2>UI/UX Design</h2>
@@ -96,9 +113,11 @@ const App = () => {
             </div>
           </div>
 
-          <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Skill</p>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>The Tools Behind</h1>
-          <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Exceptional <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
+          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Skill</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>The Tools Behind</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Exceptional <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
+          </div>
 
           <div className="skills">
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
@@ -141,7 +160,7 @@ const App = () => {
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{alignSelf: "flex-end", fontSize: "4em"}}>Mind, <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Lets Talk</span></h1>
           </div>
 
-          <div className="contact">
+          <div className="contact" data-aos-duration="1000" data-aos="zoom-in">
             <h1>Let's Work Together!</h1>
             <div className="flex">
               <input type="text" placeholder="Full Name"/>
