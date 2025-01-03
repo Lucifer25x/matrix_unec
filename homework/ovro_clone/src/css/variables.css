@@ -1,6 +1,7 @@
 :root {
     --bg: #061d1e;
     --bg2: #1f3435;
+    --bg3: #4c5d5d;
     --primary: #ffae00;
     --text: #fff;
     --text2: #d2d6d6;
@@ -14,6 +15,7 @@
 body.light {
     --bg: #fff;
     --bg2: #f2f3f3;
+    --bg3: #d9dddd;
     --primary: #ffae00;
     --text: #0e161f;
     --text2: #3d444b;

@@ -17,6 +17,19 @@ body {
     color: var(--text);
     font-family: var(--font1);
     overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+/* Scroll to top */
+.scroll_top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: var(--primary);
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 /* Container */
@@ -37,8 +50,178 @@ body {
         gap: 10px;
     }
     .right {
-        width: 60%;
+        width: 55%;
         padding-left: 20px;
+        .circle {
+            background-color: #1f3435;
+            border-radius: 50%;
+            animation: turn 20s linear infinite;
+        }
+        .big_btn {
+            display: inline-block;
+            margin-top: 50px;
+            width: 100%;
+            padding: 40px 0;
+            background-color: var(--bg2);
+            border: var(--border);
+            color: var(--text);
+            border-radius: 8px;
+            font-size: 3em;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: ease all 0.5s;
+            & span {
+                position: relative;
+                z-index: 2;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 100%;
+                background-color: var(--primary);
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: ease all 0.5s;
+            }
+            &:hover {
+                color: #000;
+            }
+            &:hover::after {
+                width: 100%;
+                transition: ease all .5s;
+            }
+        }
+
+        .cards {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            .card {
+                background-color: var(--bg2);
+                border: var(--border);
+                border-radius: 8px;
+                padding: 30px;
+                transition: ease all 0.3s;
+                & p {
+                    margin-top: 10px;
+                    color: var(--text2);
+                }
+            }
+            .card:hover {
+                transform: translateY(-10px);
+                transition: ease all 0.3s;
+                border: 1px solid var(--primary);
+            }
+            .grid {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        .skills {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            .skill {
+                background-color: var(--bg2);
+                border: var(--border);
+                border-radius: 8px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: ease all 0.3s;
+                & p {
+                    margin-top: 10px;
+                }
+            }
+            .skill:hover {
+                transform: translateY(-10px);
+                transition: ease all 0.3s;
+                border: 1px solid var(--primary);
+            }
+        }
+
+        .contact {
+            margin-top: 20px;
+            width: 100%;
+            padding: 30px;
+            background-color: var(--bg2);
+            border: var(--border);
+            border-radius: 8px;
+            & h1 {
+                margin-bottom: 20px;
+            }
+            .flex {
+                display: flex;
+                gap: 20px;
+            }
+            & input {
+                margin-top: 20px;
+                width: 100%;
+                padding: 20px;
+                background-color: var(--bg3);
+                color: var(--text);
+                border: none;
+                border-radius: 8px;
+                font-size: 1.1em;
+            }
+            & input:active, & input:focus {
+                outline: none;
+            }
+            & textarea {
+                margin-top: 20px;
+                width: 100%;
+                padding: 20px;
+                height: 150px;
+                resize: none;
+                background-color: var(--bg3);
+                color: var(--text);
+                border: none;
+                border-radius: 8px;
+                font-size: 1.1em;
+            }
+            & textarea:active, & textarea:focus {
+                outline: none;
+            }
+            & a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: var(--primary);
+                color: #000;
+                border: none;
+                border-radius: 100px;
+                font-size: 1.1em;
+                text-decoration: none;
+                transition: ease all 0.3s;
+                border: 1px solid transparent;
+                &:hover {
+                    background-color: transparent;
+                    color: var(--text);
+                    border: 1px solid var(--text);
+                }
+            }
+        }
+
+        .footer {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & p {
+                color: var(--text2);
+            }
+        }
     }
 }
 
@@ -48,11 +231,36 @@ body {
         .left {
             position: relative;
             width: 100%;
-            height: auto;
         }
         .right {
-            margin-top: 20px;
             width: 100%;
+            margin-top: 20px;
+            p {
+                float: left !important;
+            }
+            .contact {
+                .flex {
+                    margin-top: 10px;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                & input {
+                    margin-top: 0px;
+                }
+                & input:nth-child(4) {
+                    margin-top: 10px;
+                }
+            }
         }
+    }
+}
+
+/* Animations */
+@keyframes turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

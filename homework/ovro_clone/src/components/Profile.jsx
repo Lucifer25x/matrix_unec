@@ -4,7 +4,7 @@ import profile_img from "../img/profile.png";
 
 const Profile = () => {
     return (
-        <div className="profile" data-aos="fade-right" data-aos-duration="1000">
+        <div className="profile" data-aos-once="true" data-aos="fade-right" data-aos-duration="1000">
             <div className="img">
                 <img src={profile_img}/>
             </div>
