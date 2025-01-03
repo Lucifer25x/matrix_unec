@@ -140,6 +140,15 @@ body {
                 align-items: center;
                 justify-content: center;
                 transition: ease all 0.3s;
+                & img {
+                    box-sizing: content-box;
+                    padding: 10px;
+                    background-color: var(--bg3);
+                    border-radius: 8px;
+                }
+                & h2 {
+                    margin-top: 10px;
+                }
                 & p {
                     margin-top: 10px;
                 }

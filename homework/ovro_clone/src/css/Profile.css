@@ -54,10 +54,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: .3s ease all;
             &:hover {
                 background-color: var(--primary);
                 border: 1px solid var(--primary);
                 color: #000;
+                transition: .3s ease all;
             }
         }
     }
@@ -70,10 +72,12 @@
         background-color: var(--primary);
         border: 1px solid var(--primary);
         border-radius: 150px;
+        transition: .5s ease all;
         &:hover {
             background-color: transparent;
             border: 1px solid var(--text);
             color: var(--text);
+            transition: .5s ease all;
         }
     }
 }

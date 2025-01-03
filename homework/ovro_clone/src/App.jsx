@@ -8,9 +8,16 @@ import "./css/App.css";
 import sublogo from "./img/sublogo1.svg";
 import circle from "./img/circle.png";
 import reviews from "./img/reviews.png";
-import figma from "./img/figma.svg";
 import logo1 from "./img/logo1.png";
 import { RiArrowUpCircleFill } from "@remixicon/react";
+
+// Import images for skills
+import skill1 from "./img/skills/skill1.svg";
+import skill2 from "./img/skills/skill2.svg";
+import skill3 from "./img/skills/skill3.svg";
+import skill4 from "./img/skills/skill4.svg";
+import skill5 from "./img/skills/skill5.svg";
+import skill6 from "./img/skills/skill6.svg";
 
 const App = () => {
   const [scroll, setScroll] = useState(false);
@@ -121,34 +128,34 @@ const App = () => {
 
           <div className="skills">
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
+              <img src={skill1} width={80}/>
               <h2>96%</h2>
               <p>Figma</p>
             </div>
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
-              <h2>96%</h2>
-              <p>Figma</p>
+              <img src={skill2} width={80}/>
+              <h2>87%</h2>
+              <p>Photoshop</p>
             </div>
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
-              <h2>96%</h2>
-              <p>Figma</p>
+              <img src={skill3} width={80}/>
+              <h2>90%</h2>
+              <p>Illustrator</p>
             </div>
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
-              <h2>96%</h2>
-              <p>Figma</p>
+              <img src={skill4} width={80}/>
+              <h2>89%</h2>
+              <p>Sketch</p>
             </div>
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
-              <h2>96%</h2>
-              <p>Figma</p>
+              <img src={skill5} width={80}/>
+              <h2>92%</h2>
+              <p>Adobe XD</p>
             </div>
             <div data-aos-duration="1000" data-aos="fade-up" className="skill">
-              <img src={figma} width={80}/>
-              <h2>96%</h2>
-              <p>Figma</p>
+              <img src={skill6} width={80}/>
+              <h2>85%</h2>
+              <p>Wordpress</p>
             </div>
           </div>
 
