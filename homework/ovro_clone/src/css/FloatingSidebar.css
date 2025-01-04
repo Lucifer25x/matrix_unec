@@ -63,7 +63,7 @@
         content: "Portfolio";
     }
     & a:nth-child(6)::after {
-        content: "Testimonal";
+        content: "Testimonial";
     }
     & a:nth-child(7)::after {
         content: "Our Blog";

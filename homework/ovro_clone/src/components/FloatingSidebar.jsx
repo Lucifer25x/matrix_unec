@@ -4,14 +4,14 @@ import "../css/FloatingSidebar.css";
 const FloatingSidebar = () => {
     return (
         <div className="floating_sidebar">
-            <a href="#" className="active"><RiHome9Fill size={30}/></a>
-            <a href="#"><RiPantoneFill size={30}/></a>
-            <a href="#"><RiNewsFill size={30}/></a>
-            <a href="#"><RiPenNibFill size={30}/></a>
-            <a href="#"><RiChat3Fill size={30}/></a>
-            <a href="#"><RiChatQuoteFill size={30}/></a>
-            <a href="#"><RiPagesFill size={30}/></a>
-            <a href="#"><RiUserFill size={30}/></a>
+            <a href="#home" className="active"><RiHome9Fill size={30}/></a>
+            <a href="#about"><RiPantoneFill size={30}/></a>
+            <a href="#services"><RiNewsFill size={30}/></a>
+            <a href="#skills"><RiPenNibFill size={30}/></a>
+            <a href="#portfolio"><RiChat3Fill size={30}/></a>
+            <a href="#testimonial"><RiChatQuoteFill size={30}/></a>
+            <a href="#blog"><RiPagesFill size={30}/></a>
+            <a href="#contact"><RiUserFill size={30}/></a>
         </div>
     )
 }

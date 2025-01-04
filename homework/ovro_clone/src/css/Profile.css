@@ -12,6 +12,7 @@
         & img {
             width: 100%;
             object-fit: contain;
+            display: block;
         }
         .shimmer {
             position: absolute;

@@ -19,8 +19,21 @@ import skill4 from "./img/skills/skill4.svg";
 import skill5 from "./img/skills/skill5.svg";
 import skill6 from "./img/skills/skill6.svg";
 
+// Import images for results
+import result1 from "./img/results/result1.png";
+import result2 from "./img/results/result2.png";
+import result3 from "./img/results/result3.png";
+import result4 from "./img/results/result4.png";
+
+// Import images for blogs
+import blog1 from "./img/blog/blog1.png";
+import blog2 from "./img/blog/blog1.png";
+import blog3 from "./img/blog/blog1.png";
+import blog4 from "./img/blog/blog1.png";
+
 const App = () => {
   const [scroll, setScroll] = useState(false);
+  // const [pos, setPos] = useState([0,0]);
 
   useEffect(() => {
     Aos.init();
@@ -41,9 +54,14 @@ const App = () => {
     }
   }
 
+  // document.onmousemove = (e) => {
+  //   setPos([e.clientX, e.clientY]);
+  // }
+
   return (
-    <>
+    <div id="home">
       <div style={!scroll ? {display: "none"} : null} onClick={() => scrollToTop()} className="scroll_top"><RiArrowUpCircleFill size={50}/></div>
+      {/* <div className="cursor" style={{left: `${pos[0]}px`, top: `${pos[1]}px`}}></div> */}
       <Navbar />
       <div className="container">
         <div className="left">
@@ -64,7 +82,10 @@ const App = () => {
           </div>
           <a data-aos-duration="1000" data-aos="fade-up" className="big_btn" href="#"><span>Lets Work Together</span></a>
 
-          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+
+          {/* About */}
+
+          <div id="about" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
             <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> About Us</p>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Crafting Seamless</h1>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>User <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Experiences</span></h1>
@@ -95,7 +116,10 @@ const App = () => {
             </div>
           </div>
 
-          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+
+          {/* Services */}
+
+          <div id="services" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
             <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Services</p>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Elevating Brands</h1>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Intuitive <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
@@ -120,7 +144,10 @@ const App = () => {
             </div>
           </div>
 
-          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+
+          {/* Skills */}
+
+          <div id="skills" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
             <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Skill</p>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>The Tools Behind</h1>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{marginLeft: "40px", fontSize: "4em"}}>Exceptional <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Design</span></h1>
@@ -159,9 +186,149 @@ const App = () => {
             </div>
           </div>
 
-          {/* Add a few things if you have the time */}
 
-          <div style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+          {/* Portfolio */}
+
+          <div id="portfolio" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> My Portfolio</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Innovation Designs</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{alignSelf: "flex-end", fontSize: "4em"}}>Real, <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Results</span></h1>
+          </div>
+
+          <div className="portfolio_card">
+            <div className="img">
+              <img src={result1} />
+            </div>
+            <h1>Reelup - E commercer Video Platform</h1>
+          </div>
+
+          <div className="portfolio_card_group">
+            <div className="portfolio_card">
+              <div className="img">
+                <img src={result2} />
+              </div>
+              <h1>Academy - Sales Career</h1>
+            </div>
+
+            <div className="portfolio_card">
+              <div className="img">
+                <img src={result4} />
+              </div>
+              <h1>Leadlogic- Dashboard Design</h1>
+            </div>
+          </div>
+
+          <div className="portfolio_card">
+            <div className="img">
+              <img src={result3} />
+            </div>
+            <h1>Reelup - E commercer Video Platform</h1>
+          </div>
+
+
+          {/* Testimonial */}
+
+          <div id="testimonial" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> Testimonial</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>What Client Says </h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{alignSelf: "flex-end", fontSize: "4em"}}>About <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>My Work</span></h1>
+          </div>
+
+          <div className="testimonial">
+            <div className="card">
+              <p>"Working with Alex was a game-changer for our brand. Their attention to detail and focus on creating a seamless user experience truly transformed our website. We’ve seen an incredible boost in user engagement and satisfaction."</p>
+              <h2>David Elson</h2>
+              <p>Ezhe Source</p>
+            </div>
+            <div className="card">
+              <p>"Working with Alex was a game-changer for our brand. Their attention to detail and focus on creating a seamless user experience truly transformed our website. We’ve seen an incredible boost in user engagement and satisfaction."</p>
+              <h2>Chris Glasser</h2>
+              <p>Ezhe Source</p>
+            </div>
+            <div className="card">
+              <p>"Working with Alex was a game-changer for our brand. Their attention to detail and focus on creating a seamless user experience truly transformed our website. We’ve seen an incredible boost in user engagement and satisfaction."</p>
+              <h2>Rodger Struck</h2>
+              <p>Ezhe Source</p>
+            </div>
+            <div className="card">
+              <p>"Working with Alex was a game-changer for our brand. Their attention to detail and focus on creating a seamless user experience truly transformed our website. We’ve seen an incredible boost in user engagement and satisfaction."</p>
+              <h2>Mary Freund</h2>
+              <p>Ezhe Source</p>
+            </div>
+          </div>
+
+
+          {/* Blog */}
+
+          <div id="blog" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
+            <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> Our Blog</p>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Our Latest Blog Idea</h1>
+            <h1 data-aos-duration="1000" data-aos="fade-left" style={{alignSelf: "flex-end", fontSize: "4em"}}>UI/UX <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Trends</span></h1>
+          </div>
+
+          <div className="blog_cards">
+            <div className="card">
+              <div className="img">
+                <img src={blog1}/>
+              </div>
+              <div className="flex">
+                <p>UI/UX</p>
+                <p>3 min read</p>
+              </div>
+              <h3>Behind the Pixels: My Favorite Design Projects</h3>
+              <div className="flex">
+                <p>Alex Carry</p>
+                <p>Oct 26, 2024 </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="img">
+                <img src={blog2}/>
+              </div>
+              <div className="flex">
+                <p>UI/UX</p>
+                <p>3 min read</p>
+              </div>
+              <h3>Crafting Seamless Experiences: My UI/UX Design Philosophy</h3>
+              <div className="flex">
+                <p>Alex Carry</p>
+                <p>Oct 26, 2024 </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="img">
+                <img src={blog3}/>
+              </div>
+              <div className="flex">
+                <p>UI/UX</p>
+                <p>3 min read</p>
+              </div>
+              <h3>Staying Ahead: Trends Shaping UI/UX in 2024</h3>
+              <div className="flex">
+                <p>Alex Carry</p>
+                <p>Oct 26, 2024 </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="img">
+                <img src={blog4}/>
+              </div>
+              <div className="flex">
+                <p>UI/UX</p>
+                <p>3 min read</p>
+              </div>
+              <h3>From Concept to Reality: My Design Process</h3>
+              <div className="flex">
+                <p>Alex Carry</p>
+                <p>Oct 26, 2024 </p>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Contact */}
+
+          <div id="contact" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
             <p data-aos-duration="1000" data-aos="fade-left" style={{marginTop: "50px", fontSize: "1.5em", display: "flex", alignItems: "center", gap: "10px", fontWeight: "500"}}><img src={sublogo} width={20}/> Contact Me</p>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{fontSize: "4em", marginTop: "20px"}}>Have Any Project in</h1>
             <h1 data-aos-duration="1000" data-aos="fade-left" style={{alignSelf: "flex-end", fontSize: "4em"}}>Mind, <span style={{fontFamily: "var(--font2)", fontStyle: "italic", color: "var(--primary)", textDecoration: "underline"}}>Lets Talk</span></h1>
@@ -188,7 +355,7 @@ const App = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

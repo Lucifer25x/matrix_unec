@@ -19,6 +19,9 @@ body {
     overflow-x: hidden;
     margin-bottom: 20px;
 }
+html {
+    scroll-behavior: smooth;
+}  
 
 /* Scroll to top */
 .scroll_top {
@@ -32,6 +35,18 @@ body {
     }
 }
 
+/* Cursor */
+/* .cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+} */
+
 /* Container */
 .container {
     width: 100%;
@@ -43,7 +58,7 @@ body {
         height: 100%;
         width: 40%;
         position: sticky;
-        top: 0;
+        top: 12%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -160,6 +175,106 @@ body {
             }
         }
 
+        .portfolio_card {
+            margin-top: 30px;
+            width: 100%;
+            cursor: pointer;
+            .img {
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+                & img {
+                    width: 100%;
+                    object-fit: contain;
+                    display: block;
+                    transition: .3s ease all;
+                }
+                &:hover {
+                    & img {
+                        scale: 1.1;
+                        transition: .3s ease all;
+                    }
+                }
+            }
+            & h1 {
+                margin-top: 10px;
+                color: var(--text);
+                transition: .3s ease all;
+            }
+            & h1:hover {
+                color: var(--primary);
+                transition: .3s ease all;
+            }
+        }
+        .portfolio_card_group {
+            display: flex;
+            gap: 20px;
+            & h1 {
+                font-size: 1.2em;
+            }
+        }
+
+        .testimonial {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            .card {
+                padding: 20px;
+                background-color: var(--bg2);
+                border: var(--border);
+                border-radius: 8px;
+                transition: .5s ease all;
+                & p {
+                    color: var(--text2);
+                }
+                & h2 {
+                    margin-top: 20px;
+                }
+            }
+            .card:hover {
+                transform: translateY(-5px);
+                transition: .5s ease all;
+                border: 1px solid var(--primary);
+            }
+        }
+
+        .blog_cards {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            .card {
+                cursor: pointer;
+                .img {
+                    width: 100%;
+                    & img {
+                        width: 100%;
+                        object-fit: contain;
+                        display: block;
+                    }
+                }
+                .flex {
+                    margin-top: 10px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: var(--text2);
+                    font-weight: 500;
+                }
+                & h3 {
+                    margin-top: 10px;
+                    color: var(--text);
+                    transition: .5s ease all;
+                }
+                & h3:hover {
+                    color: var(--primary);
+                    transition: .5s ease all;
+                }
+            }
+        }
+
         .contact {
             margin-top: 20px;
             width: 100%;
@@ -237,7 +352,7 @@ body {
     }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1050px){
     .container {
         flex-direction: column;
         .left {
@@ -247,6 +362,7 @@ body {
         .right {
             width: 100%;
             margin-top: 20px;
+            padding-left: 0;
             p {
                 float: left !important;
             }
