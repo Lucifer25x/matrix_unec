@@ -17,16 +17,16 @@
 - [Todo App v2](https://github.com/Lucifer25x/matrix_unec/tree/main/projects/todo_app_v2)
 
 ## React Projects
-- [Bookapp Clone](https://github.com/Lucifer25x/matrix_unec/tree/main/bookapp_clone)
-- [Counter](https://github.com/Lucifer25x/matrix_unec/tree/main/counter)
-- [GitHub Search](https://github.com/Lucifer25x/matrix_unec/tree/main/github_search)
-- [Grogin](https://github.com/Lucifer25x/matrix_unec/tree/main/grogin)
-- [Ovro](https://github.com/Lucifer25x/matrix_unec/tree/main/ovro_clone)
-- [Products Page](https://github.com/Lucifer25x/matrix_unec/tree/main/products)
+- [Bookapp Clone](https://github.com/Lucifer25x/matrix_unec/tree/main/react/bookapp_clone)
+- [Counter](https://github.com/Lucifer25x/matrix_unec/tree/main/react/counter)
+- [GitHub Search](https://github.com/Lucifer25x/matrix_unec/tree/main/react/github_search)
+- [Grogin](https://github.com/Lucifer25x/matrix_unec/tree/main/react/grogin)
+- [Ovro](https://github.com/Lucifer25x/matrix_unec/tree/main/react/ovro_clone)
+- [Products Page](https://github.com/Lucifer25x/matrix_unec/tree/main/react/products)
 
 ## Other Tasks
-- [Age Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/age)
-- [Class Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/class)
-- [Clock Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/clock)
-- [Cow Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/cow_problem)
-- [Employee Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/employee)
+- [Age Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/age)
+- [Class Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/class)
+- [Clock Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/clock)
+- [Cow Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/cow_problem)
+- [Employee Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/employee)
