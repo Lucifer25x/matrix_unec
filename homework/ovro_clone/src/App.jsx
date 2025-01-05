@@ -92,8 +92,12 @@ const App = () => {
 
   return (
     <div id="home">
+      {/* Scroll to top button */}
       <div style={!scroll ? {display: "none"} : null} onClick={() => scrollToTop()} className="scroll_top"><RiArrowUpCircleFill size={50}/></div>
+
       <Navbar />
+
+      {/* Main part */}
       <div className="container">
         <div className="left">
           <FloatingSidebar />
