@@ -30,6 +30,7 @@ html {
     right: 30px;
     color: var(--primary);
     cursor: pointer;
+    z-index: 20;
     &:hover {
         opacity: 0.8;
     }
