@@ -1,3 +1,1 @@
-Source code for miniture website.
-
-Live version: https://matrixunec25.netlify.app/homework/miniture/
+[Live version](https://matrixunec25.netlify.app/projects/miniture/)

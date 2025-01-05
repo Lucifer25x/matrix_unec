@@ -1,1 +1,1 @@
-Live version: https://matrixunec25.netlify.app/homework/todo_remaster
+[Live version](https://matrixunec25.netlify.app/projects/todo_app_v2/)

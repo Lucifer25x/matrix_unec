@@ -1,3 +1,3 @@
-Source: https://demo2.pavothemes.com/poco/home-8/
+[Original](https://demo2.pavothemes.com/poco/home-8/)
 
-Live version: https://matrixunec25.netlify.app/homework/poco/
+[Live version](https://matrixunec25.netlify.app/projects/poco/)

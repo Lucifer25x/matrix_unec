@@ -1,3 +1,3 @@
-Digital clock: https://matrixunec25.netlify.app/homework/clocks/
+[Digital clock](https://matrixunec25.netlify.app/projects/clocks/)
 
-Analog clock: https://matrixunec25.netlify.app/homework/clocks/analog.html
+[Analog clock](https://matrixunec25.netlify.app/projects/clocks/analog.html)

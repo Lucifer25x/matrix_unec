@@ -1,1 +1,1 @@
-Live version: https://matrixunec25.netlify.app/homework/fetching_fake_data/
+[Live version](https://matrixunec25.netlify.app/projects/fetching_fake_data/)
