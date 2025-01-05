@@ -35,18 +35,6 @@ html {
     }
 }
 
-/* Cursor */
-/* .cursor {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    position: fixed;
-    z-index: 10;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-} */
-
 /* Container */
 .container {
     width: 100%;
@@ -54,6 +42,8 @@ html {
     margin: 20px auto;
     padding: 0 20px;
     display: flex;
+
+    /* Left Side */
     .left {
         height: 100%;
         width: 40%;
@@ -64,6 +54,8 @@ html {
         justify-content: center;
         gap: 10px;
     }
+
+    /* Right Side */
     .right {
         width: 55%;
         padding-left: 20px;
@@ -112,6 +104,8 @@ html {
             }
         }
 
+
+        /* Cards */
         .cards {
             margin-top: 50px;
             display: flex;
@@ -140,6 +134,8 @@ html {
             }
         }
 
+
+        /* Skills section */
         .skills {
             margin-top: 20px;
             display: grid;
@@ -175,6 +171,7 @@ html {
             }
         }
 
+        /* Portfolio Section */
         .portfolio_card {
             margin-top: 30px;
             width: 100%;
@@ -214,6 +211,8 @@ html {
             }
         }
 
+
+        /* Testimonial Section */
         .testimonial {
             margin-top: 20px;
             display: grid;
@@ -239,6 +238,8 @@ html {
             }
         }
 
+
+        /* Blog Cards */
         .blog_cards {
             margin-top: 20px;
             display: grid;
@@ -275,6 +276,8 @@ html {
             }
         }
 
+
+        /* Contact Section */
         .contact {
             margin-top: 20px;
             width: 100%;
@@ -337,6 +340,8 @@ html {
             }
         }
 
+
+        /* Footer */
         .footer {
             margin-top: 50px;
             display: flex;
@@ -352,6 +357,8 @@ html {
     }
 }
 
+
+/* Responsive */
 @media (max-width: 1050px){
     .container {
         flex-direction: column;

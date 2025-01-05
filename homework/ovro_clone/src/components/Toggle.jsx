@@ -10,7 +10,7 @@ const Toggle = () => {
         } else {
             document.body.classList.remove("light");
         }
-    })
+    }, [isToggled]);
     
     return (
         <label className="toggler-wrapper style-1">
