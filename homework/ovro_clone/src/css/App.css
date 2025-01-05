@@ -17,7 +17,7 @@ body {
     color: var(--text);
     font-family: var(--font1);
     overflow-x: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 html {
     scroll-behavior: smooth;
