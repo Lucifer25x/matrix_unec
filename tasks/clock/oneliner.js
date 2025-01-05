@@ -1,0 +1,2 @@
+const clock = 2;
+(clock > 6 && clock < 12) ? console.log("Good morning!") : (clock >= 12 && clock < 18) ? console.log("Good afternoon!") : (clock >= 18 && clock <= 24) ? console.log("Good evening!") : clock >= 0 ? console.log("Good night!") : console.log("Time is wrong!");

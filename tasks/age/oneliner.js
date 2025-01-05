@@ -1,0 +1,2 @@
+const age = 91;
+age < 3 ? console.log("Körpə") : age < 13 ? console.log("Uşaq") : age < 18 ? console.log("Yeniyetmə") : age < 35 ? console.log("Gənc") : age < 55 ? console.log("Orta yaşli") : age < 90 ? console.log("Yaşli") : console.log("Mərmər");
