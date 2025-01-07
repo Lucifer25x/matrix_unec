@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "variables";
+
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    color: $text;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+// Other styles
+
+.back-to-top {
+    @include flex;
+    width: 40px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $primary;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease all;
+    z-index: 1000;
+    img {
+        width: 15px;
+    }
+}
+
+// Navbar
+nav {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    .links {
+        @include flex;
+        gap: 20px;
+        a {
+            color: $text;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s ease all;
+        }
+        a:hover {
+            color: $primary;
+        }
+        .active {
+            color: $primary !important;
+            text-decoration: none;
+        }
+    }
+    .right {
+        @include flex;
+        gap: 10px;
+        svg {
+            cursor: pointer;
+        }
+    }
+}
+
+// Home
+.home {
+    @include flex;
+    width: 100%;
+    height: 80vh;
+    background: url("../img/bg-1.jpg");
+    background-size: cover;
+    .content {
+        @include container;
+        text-align: center;
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: $primary;
+            font-weight: 900;
+            max-width: 700px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px 30px;
+            background-color: $primary;
+            border: 5px solid $secondary;
+            color: white;
+            font-weight: 900;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: .5s ease all;
+        }
+        a:hover {
+            background-color: transparent;
+            color: $text;
+        }
+    }
+}
+
+// About
+.about {
+    @include container;
+    margin-top: 30px;
+    .top {
+        @include flex;
+        flex-direction: column;
+        gap: 20px;
+        h1 {
+            color: $primary;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+        p {
+            text-align: center;
+            max-width: 700px;
+        }
+    }
+    .content {
+        display: flex;
+        margin-top: 30px;
+        gap: 20px;
+        .left {
+            p:nth-child(1) {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                span {
+                    color: $primary;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+// Contact
+.contact {
+    @include container;
+    h1 {
+        color: $primary;
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 30px;
+    }
+    form {
+        .top {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            div {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                input {
+                    padding: 10px;
+                    border: $border;
+                    border-radius: 5px;
+                    outline: none;
+                }
+            }
+        }
+        textarea {
+            margin-top: 10px;
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: $border;
+            border-radius: 5px;
+            outline: none;
+            resize: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: $primary;
+            color: white;
+            border: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: .3s ease all;
+        }
+        button:hover {
+            background-color: black;
+        }
+    }
+}
+
+// Not found
+.not-found {
+    @include flex;
+    height: 80vh;
+    h1 {
+        color: $primary;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+}
+
+// Responsive
+@media screen and (max-width: 768px) {
+    nav {
+        .links {
+            display: none;
+        }
+    }
+    .home {
+        .content {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .about {
+        .top {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        .content {
+            flex-direction: column;
+            .right {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .contact {
+        form {
+            .top {
+                flex-direction: column;
+                div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .not-found {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
