@@ -11,6 +11,7 @@
 body {
     font-family: $font;
     color: $text;
+    overflow: hidden;
 }
 
 @mixin flex {
@@ -216,6 +217,36 @@ nav {
         color: $primary;
         font-size: 3rem;
         font-weight: 900;
+    }
+}
+
+// Loading page
+.loading {
+    @include flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .3s ease all;
+    z-index: 10000;
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid $primary;
+        border-top-color: transparent;
+        animation: spin 1s linear infinite;
+    }
+}
+.loading.hidden {
+    opacity: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
