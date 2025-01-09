@@ -45,40 +45,78 @@ body {
     }
 }
 
+// Banner
+.banner {
+    background-color: $bg4;
+    .content {
+        @include container;
+        @include flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        font-size: .9rem;
+    }
+}
+
 // Navbar
 nav {
-    @include container;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    .content {
+        @include container;
+        @include flex;
+        justify-content: space-between;
+        padding: 10px;
+        .links {
+            @include flex;
+            gap: 20px;
+            a {
+                color: $text;
+                text-decoration: none;
+                font-weight: bold;
+                transition: .3s ease all;
+            }
+            a:hover {
+                color: $primary;
+            }
+            .active {
+                color: $primary !important;
+                text-decoration: none;
+            }
+        }
+        .right {
+            @include flex;
+            gap: 20px;
+            > div {
+                @include flex;
+                cursor: pointer;
+                position: relative;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            > div:nth-child(1){
+                &:after {
+                    content: "0";
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    background-color: $primary;
+                    color: white;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
     position: sticky;
     top: 0;
     background-color: white;
-    .links {
-        @include flex;
-        gap: 20px;
-        a {
-            color: $text;
-            text-decoration: none;
-            font-weight: bold;
-            transition: .3s ease all;
-        }
-        a:hover {
-            color: $primary;
-        }
-        .active {
-            color: $primary !important;
-            text-decoration: none;
-        }
-    }
-    .right {
-        @include flex;
-        gap: 10px;
-        svg {
-            cursor: pointer;
-        }
-    }
+}
+nav.sticky {
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
 }
 
 // Home
@@ -321,8 +359,10 @@ footer {
 // Responsive
 @media screen and (max-width: 768px) {
     nav {
-        .links {
-            display: none;
+        .content {
+            .links {
+                display: none;
+            }
         }
     }
     .home {
@@ -372,5 +412,8 @@ footer {
                 }
             }
         }
+    }
+    .banner {
+        display: none;
     }
 }

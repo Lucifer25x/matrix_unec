@@ -7,8 +7,10 @@ const BackToTop = () => {
     window.addEventListener("scroll", () => {
         if(window.scrollY > 20) {
             setShow(true);
+            document.querySelector('nav').classList.add('sticky');
         } else {
             setShow(false);
+            document.querySelector('nav').classList.remove('sticky');
         }
     });
 
