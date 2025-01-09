@@ -23,6 +23,7 @@
 - [Grogin](https://github.com/Lucifer25x/matrix_unec/tree/main/react/grogin)
 - [Ovro](https://github.com/Lucifer25x/matrix_unec/tree/main/react/ovro_clone)
 - [Products Page](https://github.com/Lucifer25x/matrix_unec/tree/main/react/products)
+- [Router Example](https://github.com/Lucifer25x/matrix_unec/tree/main/react/router_example)
 
 ## Other Tasks
 - [Age Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/age)
