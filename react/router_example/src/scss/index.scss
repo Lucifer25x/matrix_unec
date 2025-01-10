@@ -267,7 +267,7 @@ nav.sticky {
     position: fixed;
     top: 0;
     left: 0;
-    transition: .3s ease all;
+    transition: .5s ease all;
     z-index: 10000;
     .circle {
         width: 50px;
@@ -277,9 +277,6 @@ nav.sticky {
         border-top-color: transparent;
         animation: spin 1s linear infinite;
     }
-}
-.loading.hidden {
-    opacity: 0;
 }
 
 @keyframes spin {

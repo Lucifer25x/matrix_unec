@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router";
 import {RiShoppingBasketFill, RiSearchLine} from "@remixicon/react";
-import logo from "./img/logo.png";
+import logo from "../img/logo.png";
 
 const Navbar = () => {
     return (

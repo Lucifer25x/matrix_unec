@@ -1,5 +1,5 @@
 import { useState } from "react";
-import icon from "./img/back-to-top.png";
+import icon from "../img/back-to-top.png";
 
 const BackToTop = () => {
     const [show, setShow] = useState(false);

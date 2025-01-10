@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import NotFound from './NotFound';
-import BackToTop from './BackToTop';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import NotFound from './components/NotFound';
+import BackToTop from './components/BackToTop';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       document.querySelector('.loading').style.opacity = 0;
-    }, 2000);
+    }, 1500);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 2000);
   }, []);
   return (
     <BrowserRouter>
