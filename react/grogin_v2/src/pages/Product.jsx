@@ -34,7 +34,10 @@ function Product() {
                         <p>{product.description}</p>
                         <p>Price: {product.price}</p>
                         <p>Rating: {product.rating}</p>
-                        <Link to="/">Back</Link>
+                        <div className="buttons">
+                            <Link to="/">Back</Link>
+                            <Link to="/">Add to cart</Link>
+                        </div>
                     </div>
                 </div>
             )}
