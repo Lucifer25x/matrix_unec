@@ -1,0 +1,19 @@
+:root {
+    --bg: #fff;
+    --bg2: #f3f4f6;
+    --text: #333;
+    --text2: #6b7280;
+    --primary: #634c9f;
+    --secondary: #ea580c;
+    --border_color: #f3f3f3;
+    --toggle: #333;
+}
+
+body.dark {
+    --bg: #1e1c21;
+    --bg2: #2d2b30;
+    --text: #fff;
+    --text2: #9ca3af;
+    --border_color: #2d2b30;
+    --toggle: #fff;
+}
