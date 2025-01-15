@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Stars from "../components/Stars";
+import Price from "../utils/Price";
 import "../css/Home.css";
 
 const apiUrl = "https://dummyjson.com/products";
@@ -109,8 +110,7 @@ function Home() {
                             </div>
                             <Link to={`/product/${product.id}`} className="name">{product.title}</Link>
                             <Stars rating={product.rating} />
-                            <p className="price">${product.price} <span>${product.price * 2}</span></p>
-                            <p className="discount">{Math.floor((product.price * 2 - product.price) / (product.price * 2) * 100)}%</p>
+                            <p className="price"><Price price={product.price} /></p>
                         </div>
                     ))}
                 </div>

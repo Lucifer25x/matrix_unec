@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import Price from "../utils/Price";
 import "../css/Product.css";
 
 function Product() {
@@ -32,7 +33,8 @@ function Product() {
                     <div className="details">
                         <h1>{product.title}</h1>
                         <p>{product.description}</p>
-                        <p>Price: {product.price}</p>
+                        {/* <p>Price: {product.price}</p> */}
+                        <p>Price: <Price price={product.price} /></p>
                         <p>Rating: {product.rating}</p>
                         <div className="buttons">
                             <Link to="/">Back</Link>

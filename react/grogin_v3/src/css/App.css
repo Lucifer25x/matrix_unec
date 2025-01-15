@@ -40,3 +40,17 @@ body {
     border: none;
     border-radius: 5px;
 }
+
+/* Currency selector */
+.currency-selector {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    background: var(--toggle);
+    color: var(--bg);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}

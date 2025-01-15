@@ -8,9 +8,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import "./css/App.css";
 import { ThemeContext } from './context/ThemeContext';
+import { CurrencyContext } from './context/CurrencyContext';
 
 function App() {
     const [theme, toggleTheme] = useContext(ThemeContext);
+    const [currency, rates, setCurrency] = useContext(CurrencyContext);
 
     useEffect(() => {
         document.body.classList.add(theme);
@@ -29,6 +31,12 @@ function App() {
         </Container>
         <Footer />
         <button className="toggle-theme" onClick={toggleTheme}>{theme == "light" ? "dark" : "light"}</button>
+        <select className="currency-selector" id="currency" onChange={(e) => setCurrency(e.target.value)}>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="TRY">TRY</option>
+            <option value="AZN">AZN</option>
+        </select>
         </BrowserRouter>
     )
 }
