@@ -5,7 +5,7 @@
     --text2: #6b7280;
     --primary: #634c9f;
     --secondary: #ea580c;
-    --border_color: #f3f3f3;
+    --border_color: #e0e0e0;;
     --toggle: #333;
 }
 
@@ -14,6 +14,6 @@ body.dark {
     --bg2: #2d2b30;
     --text: #fff;
     --text2: #9ca3af;
-    --border_color: #2d2b30;
+    --border_color: #3d3d3d;
     --toggle: #fff;
 }

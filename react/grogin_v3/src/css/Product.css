@@ -27,7 +27,7 @@
     padding: 20px;
     background: var(--bg2);
     border-radius: 10px;
-    border: 1px solid #e2e0e0;
+    border: 1px solid var(--border_color);
     & img {
         width: 30%;
         height: 100%;
@@ -70,9 +70,9 @@
                 transition: .5s ease all;
                 border: 1px solid transparent;
                 &:hover {
-                    background: #f3f3f3;
-                    color: #634c9f;
-                    border: 1px solid #634c9f;
+                    background-color: transparent;
+                    color: var(--primary);
+                    border: 1px solid var(--primary);
                 }
             }
             & a:nth-child(2) {
@@ -80,9 +80,9 @@
                 background: #dc2626;
                 color: #f3f3f3;
                 &:hover {
-                    background: #f3f3f3;
-                    color: #dc2626;
-                    border: 1px solid #dc2626;
+                    background-color: transparent;
+                    color: var(--secondary);
+                    border: 1px solid var(--secondary);
                 }
             }
         }
