@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Stars from "../components/Stars";
 import Price from "../utils/Price";
+import { SearchContext } from "../context/SearchContext";
 import "../css/Home.css";
 
 const apiUrl = "https://dummyjson.com/products";
@@ -15,6 +16,8 @@ function Home() {
     
     const [minRating, setMinRating] = useState(0);
     const [maxRating, setMaxRating] = useState(0);
+
+    const [searchQuery, setSearchQuery] = useContext(SearchContext);
 
     const [selectedCategories, setSelectedCategories] = useState([]);
 
@@ -103,7 +106,11 @@ function Home() {
                     <a href="#">Shop Now</a>
                 </div>
                 <div className="list">
-                    {products.filter(product => (selectedCategories.length > 0 ? selectedCategories.includes(product.category) : true) && product.price >= minPrice && product.price <= maxPrice && product.rating >= minRating && product.rating <= maxRating).map((product, index) => (
+                    {products.filter(product => 
+                    (selectedCategories.length > 0 ? selectedCategories.includes(product.category) : true) &&
+                    product.price >= minPrice && product.price <= maxPrice &&
+                    product.rating >= minRating && product.rating <= maxRating &&
+                    product.title.toLowerCase().includes(searchQuery.toLowerCase())).map((product, index) => (
                         <div key={index} className="product">
                             <div className="img">
                                 <img src={product.images[0]} alt="Product" />

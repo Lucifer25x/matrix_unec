@@ -1,15 +1,18 @@
+import { useContext } from "react";
 import { RiArrowDownSLine, RiMenuLine, RiMapPinLine, RiUserLine, RiHeartLine, RiShoppingCartLine } from "@remixicon/react";
 import logo from "../img/logo.webp";
 import "../css/Navbar.css";
 import { NavLink, Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import { SearchContext } from "../context/SearchContext";
 
 function Navbar() {
     const { totalItems } = useCart();
 
+    const [searchQuery, setSearchQuery] = useContext(SearchContext);
+
     return (
         <nav>
-
             <div className="top">
                 <div className="left">
                     <a href="#">About Us</a>
@@ -33,7 +36,7 @@ function Navbar() {
                         <p>Deliver to <br /><span>all</span></p>
                     </div>
                 </div>
-                <input type="text" placeholder="Search for products, categories or brands..." />
+                <input type="text" placeholder="Search for products, categories or brands..." onChange={e => setSearchQuery(e.target.value)} value={searchQuery}/>
                 <div className="right">
                     <div className="el">
                         <RiUserLine size={25} />
