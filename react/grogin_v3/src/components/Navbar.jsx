@@ -1,9 +1,12 @@
 import { RiArrowDownSLine, RiMenuLine, RiMapPinLine, RiUserLine, RiHeartLine, RiShoppingCartLine } from "@remixicon/react";
 import logo from "../img/logo.webp";
 import "../css/Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useCart } from "react-use-cart";
 
 function Navbar() {
+    const { totalItems } = useCart();
+
     return (
         <nav>
 
@@ -24,7 +27,7 @@ function Navbar() {
 
             <div className="nav">
                 <div className="left">
-                    <a href="#"><img src={logo} alt="Logo" width={150} /></a>
+                    <Link to="/"><img src={logo} alt="Logo" width={150} /></Link>
                     <div className="deliver">
                         <RiMapPinLine size={20} />
                         <p>Deliver to <br /><span>all</span></p>
@@ -41,7 +44,12 @@ function Navbar() {
                         <p>Wishlist</p>
                     </div>
                     <div className="el">
-                        <RiShoppingCartLine size={25} />
+                        <Link to="/cart">
+                            <div className="cart_icon">
+                                <RiShoppingCartLine size={25} />
+                                <span>{totalItems}</span>
+                            </div>
+                        </Link>
                         <p>Your Cart</p>
                     </div>
                 </div>
@@ -50,9 +58,14 @@ function Navbar() {
 
             <div className="mobile_nav">
                 <RiMenuLine size={25} />
-                <a href="#"><img src={logo} alt="Logo" width={150} /></a>
+                <Link to="/"><img src={logo} alt="Logo" width={150} /></Link>
                 <div className="el">
-                    <RiShoppingCartLine size={25} />
+                    <Link to="/cart">
+                        <div className="cart_icon">
+                            <RiShoppingCartLine size={25} />
+                            <span>{totalItems}</span>
+                        </div>
+                    </Link>
                     <p>Your Cart</p>
                 </div>
             </div>

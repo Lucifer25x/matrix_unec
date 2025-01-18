@@ -75,10 +75,17 @@
                     border: 1px solid var(--primary);
                 }
             }
-            & a:nth-child(2) {
+            & button {
                 background: var(--bg2);
                 background: #dc2626;
+                padding: 10px 20px;
+                border-radius: 5px;
                 color: #f3f3f3;
+                border: 1px solid transparent;
+                font-size: 1.2rem;
+                font-weight: 700;
+                transition: .5s ease all;
+                cursor: pointer;
                 &:hover {
                     background-color: transparent;
                     color: var(--secondary);
