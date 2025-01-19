@@ -86,3 +86,29 @@
         }
     }
 }
+
+@media(max-width: 768px) {
+    .cart {
+        & table {
+            & th, td {
+                padding: 5px;
+            }
+            & td {
+                & button {
+                    padding: 5px 5px;
+                    font-size: .8rem;
+                }
+                .inc {
+                    padding: 5px 5px;
+                    font-size: .8rem;
+                }
+            }
+            .btns {
+                & button {
+                    padding: 5px;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
