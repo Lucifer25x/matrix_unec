@@ -1,9 +1,12 @@
 import { createStore } from "redux";
-import { productReducer } from "../reducers/productReducer";
+import { productReducer, countReducer } from "../reducers/productReducer";
 
-const configureStore = () => {
+export const configureStore = () => {
     const store = createStore(productReducer);
     return store;
 }
 
-export default configureStore;
+export const configureCountStore = () => {
+    const store = createStore(countReducer);
+    return store;
+}

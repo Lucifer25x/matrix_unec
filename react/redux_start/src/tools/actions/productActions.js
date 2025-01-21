@@ -24,3 +24,15 @@ export const removeProduct = (id) => {
         payload: id
     }
 }
+
+export const increment = () => {
+    return {
+        type: 'INCREMENT'
+    }
+}
+
+export const decrement = () => {
+    return {
+        type: 'DECREMENT'
+    }
+}
