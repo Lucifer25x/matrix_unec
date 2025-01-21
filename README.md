@@ -26,6 +26,7 @@
 - [Router Example](https://github.com/Lucifer25x/matrix_unec/tree/main/react/router_example)
 - [Grogin v2](https://github.com/Lucifer25x/matrix_unec/tree/main/react/grogin_v2)
 - [Grogin v3](https://github.com/Lucifer25x/matrix_unec/tree/main/react/grogin_v3)
+- [Redux Start](https://github.com/Lucifer25x/matrix_unec/tree/main/react/redux_start)
 
 ## Other Tasks
 - [Age Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/age)
