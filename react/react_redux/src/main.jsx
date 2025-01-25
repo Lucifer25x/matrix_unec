@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
 import App from './App.jsx'
 import configureStore from "./tools/store/configureStore"
-import { Provider } from 'react-redux'
 import {addProduct} from "./tools/actions/productActions"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
