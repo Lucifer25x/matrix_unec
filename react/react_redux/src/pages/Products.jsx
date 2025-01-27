@@ -7,9 +7,9 @@ const Products = () => {
     const data = useSelector(state => state);
     return (
         <Container>
-            <p className='h1 text-center my-5'>Products</p>
+            <p className='h1 text-center my-5'>Products {`Try: ${5+3}`}</p>
 
-            <Row>
+            <Row className='g-3'>
                 {data.map(product => (
                     <SingleProduct key={product.id} img={product.img} name={product.name} price={product.price} />
                 ))}

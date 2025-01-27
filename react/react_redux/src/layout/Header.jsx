@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -19,7 +19,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <button className="btn btn-warning" type="submit">Login</button>
+                        <Link className="btn btn-warning" to="/dashboard">Login</Link>
                     </form>
                 </div>
             </div>
