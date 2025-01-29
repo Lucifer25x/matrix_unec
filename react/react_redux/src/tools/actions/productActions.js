@@ -15,3 +15,10 @@ export const addProduct = ({img, name, desc, price}) => {
         }
     }
 }
+
+export const removeProduct = (id) => {
+    return {
+        type: "REMOVE_PRODUCT",
+        payload: id
+    }
+}

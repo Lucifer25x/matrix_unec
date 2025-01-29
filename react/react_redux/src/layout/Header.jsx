@@ -19,7 +19,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <Link className="btn btn-warning" to="/dashboard">Login</Link>
+                        <Link className="btn btn-warning" to="/login">Login</Link>
                     </form>
                 </div>
             </div>
