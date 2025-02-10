@@ -28,6 +28,7 @@
 - [Grogin v3](https://github.com/Lucifer25x/matrix_unec/tree/main/react/grogin_v3)
 - [Redux Start](https://github.com/Lucifer25x/matrix_unec/tree/main/react/redux_start)
 - [React Redux](https://github.com/Lucifer25x/matrix_unec/tree/main/react/react_redux)
+- [React Redux Toolkit Todo](https://github.com/Lucifer25x/matrix_unec/tree/main/react/redux_toolkit_todo)
 
 ## Other Tasks
 - [Age Problem](https://github.com/Lucifer25x/matrix_unec/tree/main/tasks/age)
